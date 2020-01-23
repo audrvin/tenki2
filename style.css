@@ -1,0 +1,217 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    user-select: none;
+}
+
+body {
+    background-color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+    color: rgb(230, 219, 219);
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 20px;
+}
+
+/*NAV LINKS*/
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 5vh;
+    background-color: rgb(177, 100, 125);
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: rgb(230, 219, 219);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/*MENU BUTTON*/
+.burger {
+    display: none;
+}
+
+.burger div {
+    background-color: rgb(230, 219, 219);
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+
+@media screen and (max-width:1024px){
+    .nav-links{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:3440px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 100vh;
+        top: 0vh;
+        background-color: rgb(177, 100, 125);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 15%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 1;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+/*BOOTSTRAP*/
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#home {
+    background-image: url('./images/background.jpg');
+    display: table;
+    height: 60%;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+ }
+
+ .landing-text {
+     display: table-cell;
+     text-align: center;
+    vertical-align: middle; 
+ }
+
+ .landing-text h1 {
+     font-size: 500%;
+     font-weight: 700;
+
+ }
+
+ .padding {
+     padding: 80px 0;
+ }
+
+ .padding img {
+    width: 100%;
+ }
+
+ #fixed {
+     background: url(./images/keybackground.jpeg) no-repeat center center fixed;
+     display: table;
+     height: 40%;
+     position: relative;
+     width: 100%;
+     background-size: cover;
+ }
+
+footer {
+    width: 100%;
+    background-color: rgb(177, 100, 125);
+    padding: 5% 5% 5% 5%;
+    color: white;
+}
+
+.fa {
+    padding: 15px;
+    font-size: 25px;
+    color: white;
+}
+
+.fa:hover {
+    color: rgb(189, 185, 185);
+    text-decoration: none;
+}
+
+.icon {
+    max-width: 200px;
+}
+
+@media (max-width: 768px) {
+    .landing-text h1 {
+        font-size: 300%;
+    }
+    .fa {
+        font-size: 20px;
+        padding: 10px;
+    }
+    .icon {
+        padding-top: 5%;
+        max-width: 100px;
+    }
+}
+
+.purchase-row {
+    background: url(./images/background.jpg) no-repeat center center fixed;
+    display: table;
+    height: 10%;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    color: white;
+    padding: 6em;
+}
