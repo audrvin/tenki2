@@ -140,17 +140,40 @@ html, body {
 
  }
 
+ #builds {
+    background-image: url('./images/buildsbackground2.jpg');
+    display: table;
+    height: 60%;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+ }
+
  .landing-text {
      display: table-cell;
      text-align: center;
     vertical-align: middle; 
  }
 
+ .landing-text-builds {
+    display: table-cell;
+    text-align: center;
+   vertical-align: middle; 
+   color: rgb(39, 25, 92);
+}
+
  .landing-text h1 {
      font-size: 500%;
      font-weight: 700;
 
  }
+
+ .landing-text-builds h1 {
+    font-size: 500%;
+    font-weight: 700;
+
+}
 
  .padding {
      padding: 80px 0;
@@ -172,7 +195,7 @@ html, body {
 footer {
     width: 100%;
     background-color: rgb(177, 100, 125);
-    padding: 5% 5% 5% 5%;
+    padding: 2em;
     color: white;
 }
 
@@ -206,7 +229,7 @@ footer {
 }
 
 .purchase-row {
-    background: url(./images/background.jpg) no-repeat center center fixed;
+    background: linear-gradient(rgba(14, 14, 202, 0.726), rgba(192, 20, 20, 0.589));
     display: table;
     height: 10%;
     position: relative;
@@ -214,4 +237,13 @@ footer {
     background-size: cover;
     color: white;
     padding: 6em;
+}
+
+.colored-col {
+    background-color:  rgba(177, 100, 124, 0.651);
+    height: 320px;
+}
+
+.colored-col img{
+    height: 320px;
 }
